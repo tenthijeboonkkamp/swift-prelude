@@ -34,37 +34,28 @@ let package = Package(
             ]
         ),
         .testTarget(name: "EitherTests", dependencies: ["Either"]),
-        
-            .target(name: "Frp", dependencies: ["Prelude", "ValidationSemigroup"]),
+        .target(name: "Frp", dependencies: ["Prelude", "ValidationSemigroup"]),
         .testTarget(name: "FrpTests", dependencies: ["Frp"]),
-        
-            .target(name: "Optics", dependencies: ["Prelude", "Either"]),
+        .target(name: "Optics", dependencies: ["Prelude", "Either"]),
         .testTarget(name: "OpticsTests", dependencies: ["Optics"]),
-        
-            .target(
-                name: "Prelude",
-                dependencies: [
-                    .product(name: "Dependencies", package: "swift-dependencies"),
-                ]
-            ),
+        .target(
+            name: "Prelude",
+            dependencies: [
+                .product(name: "Dependencies", package: "swift-dependencies"),
+            ]
+        ),
         .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
-        
-            .target(name: "Reader", dependencies: ["Prelude"]),
+        .target(name: "Reader", dependencies: ["Prelude"]),
         .testTarget(name: "ReaderTests", dependencies: ["Reader"]),
-        
-            .target(name: "State", dependencies: ["Prelude"]),
+        .target(name: "State", dependencies: ["Prelude"]),
         .testTarget(name: "StateTests", dependencies: ["State"]),
-        
-            .target(name: "Tuple", dependencies: ["Prelude"]),
+        .target(name: "Tuple", dependencies: ["Prelude"]),
         .testTarget(name: "TupleTests", dependencies: ["Tuple"]),
-        
-            .target(name: "ValidationSemigroup", dependencies: ["Prelude"]),
+        .target(name: "ValidationSemigroup", dependencies: ["Prelude"]),
         .testTarget(name: "ValidationSemigroupTests", dependencies: ["ValidationSemigroup"]),
-        
-            .target(name: "ValidationNearSemiring", dependencies: ["Prelude", "Either"]),
+        .target(name: "ValidationNearSemiring", dependencies: ["Prelude", "Either"]),
         .testTarget(name: "ValidationNearSemiringTests", dependencies: ["ValidationNearSemiring"]),
-        
-            .target(name: "Writer", dependencies: ["Prelude"]),
+        .target(name: "Writer", dependencies: ["Prelude"]),
         .testTarget(name: "WriterTests", dependencies: ["Writer"]),
     ]
 )
